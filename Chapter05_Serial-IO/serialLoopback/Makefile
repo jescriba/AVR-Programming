@@ -4,8 +4,8 @@
 ##########    Check these every time you start a new project    ##########
 ##########------------------------------------------------------##########
 
-MCU   = atmega168p
-F_CPU = 1000000UL  
+MCU   = atmega328p
+F_CPU = 16000000UL  
 BAUD  = 9600UL
 ## Also try BAUD = 19200 or 38400 if you're feeling lucky.
 
@@ -20,7 +20,7 @@ LIBDIR = ../../AVR-Programming-Library
 ##########        (Can override.  See bottom of file.)          ##########
 ##########------------------------------------------------------##########
 
-PROGRAMMER_TYPE = usbtiny
+PROGRAMMER_TYPE = arduino
 # extra arguments to avrdude: baud rate, chip type, -F flag, etc.
 PROGRAMMER_ARGS = 	
 
@@ -163,7 +163,7 @@ flash_109: flash
 ##########------------------------------------------------------##########
 
 ## Mega 48, 88, 168, 328 default values
-LFUSE = 0x62
+LFUSE = 0xFF
 HFUSE = 0xdf
 EFUSE = 0x00
 
@@ -172,9 +172,9 @@ FUSE_STRING = -U lfuse:w:$(LFUSE):m -U hfuse:w:$(HFUSE):m -U efuse:w:$(EFUSE):m
 
 fuses: 
 	$(AVRDUDE) -c $(PROGRAMMER_TYPE) -p $(MCU) \
-	           $(PROGRAMMER_ARGS) $(FUSE_STRING)
+	           $(PROGRAMMER_ARGS) $(FUSE_STRING) -P /dev/ttyACM0
 show_fuses:
-	$(AVRDUDE) -c $(PROGRAMMER_TYPE) -p $(MCU) $(PROGRAMMER_ARGS) -nv	
+	$(AVRDUDE) -c $(PROGRAMMER_TYPE) -p $(MCU) $(PROGRAMMER_ARGS) -nv -P /dev/ttyACM0
 
 ## Called with no extra definitions, sets to defaults
 set_default_fuses:  FUSE_STRING = -U lfuse:w:$(LFUSE):m -U hfuse:w:$(HFUSE):m -U efuse:w:$(EFUSE):m 

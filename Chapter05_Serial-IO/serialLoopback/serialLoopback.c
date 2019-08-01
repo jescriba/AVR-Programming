@@ -22,7 +22,9 @@ int main(void) {
   while (1) {
 
     serialCharacter = receiveByte();
-    transmitByte(serialCharacter);
+    // transmitByte(serialCharacter);
+    printBinaryByte(serialCharacter);
+    printString("\r\n");
     LED_PORT = serialCharacter;
                            /* display ascii/numeric value of character */
 
