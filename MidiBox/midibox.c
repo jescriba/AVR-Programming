@@ -5,15 +5,14 @@
 #include "scale16.h"
 #include "pinDefines.h"
 #include "USART.h"
-#include "25LC256.h"
+#include "AS1108.h"
 
 int main(void) {
-  uint8_t i;
-  uint8_t address;
+  uint16_t i = 0xFF;
 
   // -------- Inits --------- //
   initSPI();
   initUSART();
-  EEPROM_writeByte(address, i);
+  DISPLAY_writeWord(i);
   return 0;
 }
