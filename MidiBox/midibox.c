@@ -13,6 +13,7 @@ int main(void) {
   // -------- Inits --------- //
   initSPI();
   initUSART();
+  _delay_ms(3000);
   DISPLAY_writeWord(i);
   return 0;
 }

@@ -1,4 +1,5 @@
 #include "AS1108.h"
+#include <util/delay.h>
 
 void initSPI(void) {
   SPI_SS_DDR |= (1 << SPI_SS);                        /* set SS output */
@@ -11,6 +12,7 @@ void initSPI(void) {
   /* Don't have to set phase, polarity b/c
    * default works with 25LCxxx chips */
   SPCR |= (1 << SPR1);                /* div 16, safer for breadboards */
+  SPCR |= (1 << SPR0);
   SPCR |= (1 << MSTR);                                  /* clockmaster */
   SPCR |= (1 << SPE);                                        /* enable */
 }
@@ -23,7 +25,9 @@ void SPI_tradeByte(uint8_t byte) {
 
 void DISPLAY_writeWord(uint16_t word) {
   SLAVE_SELECT;
-  SPI_tradeByte((uint8_t) (word >> 8));
+  //SPI_tradeByte((uint8_t) (word >> 8));
+  SPI_tradeByte((uint8_t) word);
+  SPI_tradeByte((uint8_t) word);
   SPI_tradeByte((uint8_t) word);
   SLAVE_DESELECT;
 }

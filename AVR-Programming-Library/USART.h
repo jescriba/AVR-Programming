@@ -5,7 +5,7 @@
  */
 
 #ifndef BAUD                          /* if not defined in Makefile... */
-#define BAUD  9600                     /* set a safe default baud rate */
+#define BAUD  19200                     /* set a safe default baud rate */
 #endif
 
                                   /* These are defined for convenience */
