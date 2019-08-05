@@ -11,8 +11,9 @@ void initSPI(void) {
 
   /* Don't have to set phase, polarity b/c
    * default works with 25LCxxx chips */
-  SPCR |= (1 << SPR1);                /* div 16, safer for breadboards */
-  SPCR |= (1 << SPR0);
+  // SPCR |= (1 << CPOL); // clock rising edge but idle high
+  // SPCR |= (1 << CPHA);
+  SPCR |= (1 << SPR0);                /* div 16, safer for breadboards */
   SPCR |= (1 << MSTR);                                  /* clockmaster */
   SPCR |= (1 << SPE);                                        /* enable */
 }
@@ -23,11 +24,81 @@ void SPI_tradeByte(uint8_t byte) {
                                 /* SPDR now contains the received byte */
 }
 
-void DISPLAY_writeWord(uint16_t word) {
+void DISPLAY_writeByte(uint8_t address, uint8_t byte) {
   SLAVE_SELECT;
-  //SPI_tradeByte((uint8_t) (word >> 8));
-  SPI_tradeByte((uint8_t) word);
-  SPI_tradeByte((uint8_t) word);
-  SPI_tradeByte((uint8_t) word);
+  SPI_tradeByte(address);
+  SPI_tradeByte(byte);
   SLAVE_DESELECT;
+  SPI_tradeByte(byte);
+
+}
+
+void DISPLAY_test() {
+  // Note: these data byte values just come straight from the AS1108 datasheet.
+  DISPLAY_writeByte(DISPLAY_TEST_ADDRESS, 0xF);
+}
+
+void DISPLAY_setNoDecodeMode() {
+  DISPLAY_writeByte(DECODE_MODE_ADDRESS, 0x0);
+}
+
+void DISPLAY_setDecodeAllMode() {
+  DISPLAY_writeByte(DECODE_MODE_ADDRESS, 0xF);
+}
+
+void DISPLAY_setScanLimit(uint8_t byte) {
+  DISPLAY_writeByte(SCAN_LIMIT_ADDRESS, byte);
+}
+
+// MARK: Intensity control register
+void DISPLAY_setBrightness(uint8_t byte) {
+  DISPLAY_writeByte(INTENSITY_CONTROL_ADDRESS, byte);
+}
+
+// MARK: Feature Register controls
+
+/* Note: The feature register is byte initialized to 0 on power
+ up so I have a global to prevent overwriting existing values
+ when using the functions below */
+uint8_t featureData = 0x00;
+
+void DISPLAY_setCodeBMode() {
+  // bit-wise trick to set 0 at feature decode select bit without changing other bites
+  featureData &= ~(1 << FEATURE_DECODE_SELECT);
+  DISPLAY_writeByte(FEATURE_ADDRESS, featureData);
+}
+
+void DISPLAY_setHexDecodeMode() {
+  featureData |= (1 << FEATURE_DECODE_SELECT);
+  DISPLAY_writeByte(FEATURE_ADDRESS, featureData);
+}
+
+void DISPLAY_setSPIEnable() {
+  featureData |= (1 << FEATURE_SPI_ENABLE);
+  DISPLAY_writeByte(FEATURE_ADDRESS, featureData);
+}
+
+void DISPLAY_enableBlinking() {
+  featureData |= (1 << FEATURE_BLINK_ENABLE);
+  DISPLAY_writeByte(FEATURE_ADDRESS, featureData);
+}
+
+void DISPLAY_disableBlinking() {
+  featureData &= ~(1 << FEATURE_BLINK_ENABLE);
+  DISPLAY_writeByte(FEATURE_ADDRESS, featureData);
+}
+
+void DISPLAY_setLowBlinkFrequency() {
+  featureData |= (1 << FEATURE_BLINK_FREQ_SELECT);
+  DISPLAY_writeByte(FEATURE_ADDRESS, featureData);
+}
+
+void DISPLAY_setHighBlinkFrequency() {
+  featureData &= ~(1 << FEATURE_BLINK_FREQ_SELECT);
+  DISPLAY_writeByte(FEATURE_ADDRESS, featureData);
+}
+
+void DISPLAY_reset() {
+  featureData |= (1 << FEATURE_CONTROL_REGISTER_RESET);
+  DISPLAY_writeByte(FEATURE_ADDRESS, featureData);
 }
