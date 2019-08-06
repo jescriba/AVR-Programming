@@ -7,28 +7,19 @@
 int main(void) {
   initSPI();
   initUSART();
+  DISPLAY_writeByte(SHUTDOWN_ADDRESS, 0xFF);
+  //DISPLAY_setSPIEnable();
+  DISPLAY_setScanLimit(3);
+  DISPLAY_setBrightness(0x33);
+  DISPLAY_setDecodeAllMode();
+  DISPLAY_setHexDecodeMode();
 
- DISPLAY_reset();
- // DISPLAY_setSPIEnable();
- // DISPLAY_setScanLimit(3);
- // //DISPLAY_setBrightness(0x2);
- // DISPLAY_setDecodeAllMode();
- // DISPLAY_setHexDecodeMode();
+  DISPLAY_enableBlinking();
+  DISPLAY_writeByte(DIGIT_0_ADDRESS, 0b00001000); // should be a 6 in hex mode
+  DISPLAY_writeByte(DIGIT_1_ADDRESS, 0b00000000);
+  DISPLAY_writeByte(DIGIT_2_ADDRESS, 0b00000000);
+  DISPLAY_writeByte(DIGIT_3_ADDRESS, 0b00001000);
 
- for (int j = 0; j < 2000; j++) {
-   _delay_ms(5);
-   //DISPLAY_test();
-   DISPLAY_writeByte(DIGIT_0_ADDRESS, 0b1000); // should be a 6 in hex mode
-   DISPLAY_writeByte(DIGIT_1_ADDRESS, 0b0000);
-   DISPLAY_writeByte(DIGIT_2_ADDRESS, 0b0000);
-   DISPLAY_writeByte(DIGIT_3_ADDRESS, 0b1000);
- }
-
-  // DISPLAY_enableBlinking();
-  // DISPLAY_writeByte(DIGIT_0_ADDRESS, 0b1000); // should be a 6 in hex mode
-  // DISPLAY_writeByte(DIGIT_1_ADDRESS, 0b0000);
-  // DISPLAY_writeByte(DIGIT_2_ADDRESS, 0b0000);
-  // DISPLAY_writeByte(DIGIT_3_ADDRESS, 0b1000);
-
+  //DISPLAY_reset();
   return 0;
 }

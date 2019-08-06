@@ -11,9 +11,7 @@ void initSPI(void) {
 
   /* Don't have to set phase, polarity b/c
    * default works with 25LCxxx chips */
-  // SPCR |= (1 << CPOL); // clock rising edge but idle high
-  // SPCR |= (1 << CPHA);
-  SPCR |= (1 << SPR0);                /* div 16, safer for breadboards */
+  SPCR |= (1 << SPR1);                /* div 16, safer for breadboards */
   SPCR |= (1 << MSTR);                                  /* clockmaster */
   SPCR |= (1 << SPE);                                        /* enable */
 }
@@ -29,21 +27,19 @@ void DISPLAY_writeByte(uint8_t address, uint8_t byte) {
   SPI_tradeByte(address);
   SPI_tradeByte(byte);
   SLAVE_DESELECT;
-  SPI_tradeByte(byte);
-
 }
 
 void DISPLAY_test() {
   // Note: these data byte values just come straight from the AS1108 datasheet.
-  DISPLAY_writeByte(DISPLAY_TEST_ADDRESS, 0xF);
+  DISPLAY_writeByte(DISPLAY_TEST_ADDRESS, 0xFF);
 }
 
 void DISPLAY_setNoDecodeMode() {
-  DISPLAY_writeByte(DECODE_MODE_ADDRESS, 0x0);
+  DISPLAY_writeByte(DECODE_MODE_ADDRESS, 0x00);
 }
 
 void DISPLAY_setDecodeAllMode() {
-  DISPLAY_writeByte(DECODE_MODE_ADDRESS, 0xF);
+  DISPLAY_writeByte(DECODE_MODE_ADDRESS, 0x0F);
 }
 
 void DISPLAY_setScanLimit(uint8_t byte) {
