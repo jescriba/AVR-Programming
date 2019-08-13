@@ -88,3 +88,8 @@ void DISPLAY_setHighBlinkFrequency();
 
  /* Reset control register to default */
  void DISPLAY_reset();
+
+ /* MARK: Convenience */
+ void DISPLAY_defaultConfig();
+
+ void DISPLAY_defaultTest();

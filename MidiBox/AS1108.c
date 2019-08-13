@@ -102,3 +102,20 @@ void DISPLAY_reset() {
   featureData |= (1 << FEATURE_CONTROL_REGISTER_RESET);
   DISPLAY_writeByte(FEATURE_ADDRESS, featureData);
 }
+
+void DISPLAY_defaultConfig() {
+  DISPLAY_setupNormalOperation();
+  DISPLAY_setScanLimit(3);
+  DISPLAY_setBrightness(0xCC);
+  DISPLAY_setNoDecodeMode();
+}
+
+void DISPLAY_defaultTest() {
+  for (int i = 0; i < 9; i++) {
+    DISPLAY_writeByte(DIGIT_0_ADDRESS, 1 << i);
+    DISPLAY_writeByte(DIGIT_1_ADDRESS, 1 << i);
+    DISPLAY_writeByte(DIGIT_2_ADDRESS, 1 << i);
+    DISPLAY_writeByte(DIGIT_3_ADDRESS, 1 << i);
+    _delay_ms(400);
+  }
+}
