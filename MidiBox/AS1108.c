@@ -29,6 +29,10 @@ void DISPLAY_writeByte(uint8_t address, uint8_t byte) {
   SLAVE_DESELECT;
 }
 
+void DISPLAY_setupNormalOperation() {
+  DISPLAY_writeByte(SHUTDOWN_ADDRESS, 0xFF);
+}
+
 void DISPLAY_test() {
   // Note: these data byte values just come straight from the AS1108 datasheet.
   DISPLAY_writeByte(DISPLAY_TEST_ADDRESS, 0xFF);

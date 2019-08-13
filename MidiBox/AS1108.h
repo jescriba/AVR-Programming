@@ -42,6 +42,9 @@ void SPI_tradeByte(uint8_t byte);
 		   * Note: first nibble is DONT CARE on address */
 void DISPLAY_writeByte(uint8_t address, uint8_t byte);
 
+/*  Bring the chip out of shutdown mode */
+void DISPLAY_setupNormalOperation();
+
  /* Display test mode writes all segments and digits */
 void DISPLAY_test();
 
