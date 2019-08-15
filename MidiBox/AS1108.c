@@ -29,6 +29,11 @@ void DISPLAY_writeByte(uint8_t address, uint8_t byte) {
   SLAVE_DESELECT;
 }
 
+void DISPLAY_writeChar(uint8_t address, char val) {
+  uint8_t byteVal = DISPLAY_byteForChar(val);
+  DISPLAY_writeByte(address, byteVal);
+}
+
 void DISPLAY_setupNormalOperation() {
   DISPLAY_writeByte(SHUTDOWN_ADDRESS, 0xFF);
 }
@@ -111,11 +116,71 @@ void DISPLAY_defaultConfig() {
 }
 
 void DISPLAY_defaultTest() {
-  for (int i = 0; i < 9; i++) {
-    DISPLAY_writeByte(DIGIT_0_ADDRESS, 1 << i);
-    DISPLAY_writeByte(DIGIT_1_ADDRESS, 1 << i);
-    DISPLAY_writeByte(DIGIT_2_ADDRESS, 1 << i);
-    DISPLAY_writeByte(DIGIT_3_ADDRESS, 1 << i);
-    _delay_ms(400);
+  for (int j = 0; j < 9; j++) {
+    DISPLAY_writeByte(DIGIT_0_ADDRESS, 1 << j);
+    DISPLAY_writeByte(DIGIT_1_ADDRESS, 1 << j);
+    DISPLAY_writeByte(DIGIT_2_ADDRESS, 1 << j);
+    DISPLAY_writeByte(DIGIT_3_ADDRESS, 1 << j);
+    _delay_ms(240);
+  }
+}
+
+// MARK: No-decode digit and other values byte representations
+uint8_t DISPLAY_byteForChar(char val) {
+  switch (val)
+  {
+    case 'a':
+      return 0b01111101;
+    case 'A':
+      return 0b01110111;
+    case 'b':
+      return 0b00011111;
+    case 'B':
+      return 0b01111111;
+    case 'c':
+      return 0b00001101;
+    case 'C':
+      return 0b01001110;
+    case 'd':
+      return 0b00111101;
+    case 'e':
+      return 0b01101111;
+    case 'E':
+      return 0b01001111;
+    case 'f':
+    case 'F':
+      return 0b01000111;
+    case 'g':
+      return 0b01111011;
+    case 'G':
+      return 0b01011110;
+    case 'o':
+      return 0b00011101;
+    case 'D':
+    case 'O':
+    case '0':
+      return 0b01111110;
+    case '1':
+      return 0b00110000;
+    case '2':
+      return 0b01101101;
+    case '3':
+      return 0b01111001;
+    case '4':
+      return 0b00110011;
+    case '5':
+      return 0b01011011;
+    case '6':
+      return 0b01011111;
+    case '7':
+      return 0b01110000;
+    case '8':
+      return 0b01111111;
+    case '9':
+      return 0b01110011;
+    case '-':
+      return 0b00000001;
+    default:
+      return 0;
   }
 }

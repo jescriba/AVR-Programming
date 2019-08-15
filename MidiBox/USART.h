@@ -4,8 +4,8 @@
      the bit-rate multiplier.
  */
 
-#ifndef BAUD            /* if not defined in Makefile... */
-#define BAUD  31250     /* set a safe default baud rate */
+#ifndef BAUD                          /* if not defined in Makefile... */
+#define BAUD  19200                     /* set a safe default baud rate */
 #endif
 
                                   /* These are defined for convenience */
