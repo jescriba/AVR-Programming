@@ -44,10 +44,15 @@ void DISPLAY_writeByte(uint8_t address, uint8_t byte);
 
 void DISPLAY_writeChar(uint8_t address, char val);
 
+void DISPLAY_writeChars(char str[]);
+
 uint8_t DISPLAY_byteForChar(char val);
 
 /*  Bring the chip out of shutdown mode */
 void DISPLAY_setupNormalOperation();
+
+/* Bring chip out of shutdown mode but reset feature register */
+void DISPLAY_setupNormalOperationResetFeature();
 
  /* Display test mode writes all segments and digits */
 void DISPLAY_test();
@@ -92,6 +97,12 @@ void DISPLAY_setHighBlinkFrequency();
 
  /* Reset control register to default */
  void DISPLAY_reset();
+
+ /* Set external clock */
+ void DISPLAY_setExternalClock();
+
+ /* Set to use internal oscillator as clock */
+ void DISPLAY_setInternalClock();
 
  /* MARK: Convenience */
  void DISPLAY_defaultConfig();

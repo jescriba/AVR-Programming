@@ -34,8 +34,32 @@ void DISPLAY_writeChar(uint8_t address, char val) {
   DISPLAY_writeByte(address, byteVal);
 }
 
+uint8_t addressForDigit(int i) {
+  switch (i) {
+    case 0:
+      return DIGIT_0_ADDRESS;
+    case 1:
+      return DIGIT_1_ADDRESS;
+    case 2:
+      return DIGIT_2_ADDRESS;
+    case 3:
+      return DIGIT_3_ADDRESS;
+  }
+}
+
+void DISPLAY_writeChars(char str[]) {
+  for(int i = 0; i < 4; i++) {
+    char c = DISPLAY_byteForChar(str[i]);
+    DISPLAY_writeByte(addressForDigit(i), c);
+  }
+}
+
 void DISPLAY_setupNormalOperation() {
-  DISPLAY_writeByte(SHUTDOWN_ADDRESS, 0xFF);
+  DISPLAY_writeByte(SHUTDOWN_ADDRESS, 0x81);
+}
+
+void DISPLAY_setupNormalOperationResetFeature() {
+  DISPLAY_writeByte(SHUTDOWN_ADDRESS, 0x01);
 }
 
 void DISPLAY_test() {
@@ -108,10 +132,20 @@ void DISPLAY_reset() {
   DISPLAY_writeByte(FEATURE_ADDRESS, featureData);
 }
 
+void DISPLAY_setExternalClock() {
+  featureData |= (1 << FEATURE_CLOCK_ENABLE);
+  DISPLAY_writeByte(FEATURE_ADDRESS, featureData);
+}
+
+void DISPLAY_setInternalClock() {
+  featureData &= ~(1 << FEATURE_CLOCK_ENABLE);
+  DISPLAY_writeByte(FEATURE_ADDRESS, featureData);
+}
+
 void DISPLAY_defaultConfig() {
-  DISPLAY_setupNormalOperation();
+  DISPLAY_setupNormalOperationResetFeature();
   DISPLAY_setScanLimit(3);
-  DISPLAY_setBrightness(0xCC);
+  DISPLAY_setBrightness(0x01);
   DISPLAY_setNoDecodeMode();
 }
 
@@ -121,7 +155,7 @@ void DISPLAY_defaultTest() {
     DISPLAY_writeByte(DIGIT_1_ADDRESS, 1 << j);
     DISPLAY_writeByte(DIGIT_2_ADDRESS, 1 << j);
     DISPLAY_writeByte(DIGIT_3_ADDRESS, 1 << j);
-    _delay_ms(240);
+    _delay_ms(200);
   }
 }
 
@@ -156,10 +190,17 @@ uint8_t DISPLAY_byteForChar(char val) {
       return 0b01011110;
     case 'o':
       return 0b00011101;
+    case 'L':
+      return 0b00001110;
+    case 'h':
+      return 0b00010111;
+    case 'H':
+      return 0b00110111;
     case 'D':
     case 'O':
     case '0':
       return 0b01111110;
+    case 'l':
     case '1':
       return 0b00110000;
     case '2':

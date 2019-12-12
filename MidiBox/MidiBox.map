@@ -1,40 +1,47 @@
 Archive member included to satisfy reference by file (symbol)
 
-/usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_udivmodqi4.o)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodqi4.o)
                               MIDI.o (__udivmodqi4)
-/usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_udivmodhi4.o)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
                               ../AVR-Programming-Library/USART.o (__udivmodhi4)
-/usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_exit.o)
-                              /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/../../../../../../avr/lib/avr5/crtatmega328p.o (exit)
-/usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_tablejump2.o)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o (exit)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_tablejump2.o)
                               MIDI.o (__tablejump2__)
-/usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_copy_data.o)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
                               AS1108.o (__do_copy_data)
-/usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_clear_bss.o)
+/usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
                               AS1108.o (__do_clear_bss)
 
 Discarded input sections
 
- .data          0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/../../../../../../avr/lib/avr5/crtatmega328p.o
- .bss           0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/../../../../../../avr/lib/avr5/crtatmega328p.o
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+ .text          0x0000000000000000        0x0 MIDI.o
+ .data          0x0000000000000000        0x0 MIDI.o
+ .bss           0x0000000000000000        0x0 MIDI.o
+ .text          0x0000000000000000        0x0 organ.o
+ .data          0x0000000000000000        0x0 organ.o
+ .bss           0x0000000000000000        0x0 organ.o
+ .stab          0x0000000000000000      0x63c organ.o
+ .text.playNote
+                0x0000000000000000       0x3a organ.o
+ .text.rest     0x0000000000000000        0xe organ.o
+ .comment       0x0000000000000000       0x12 organ.o
+ .text          0x0000000000000000        0x0 MAX7219.o
+ .data          0x0000000000000000        0x0 MAX7219.o
+ .bss           0x0000000000000000        0x0 MAX7219.o
+ .stab          0x0000000000000000      0x27c MAX7219.o
+                                        0x288 (size before relaxing)
+ .comment       0x0000000000000000       0x12 MAX7219.o
  .text          0x0000000000000000        0x0 AS1108.o
  .data          0x0000000000000000        0x0 AS1108.o
  .bss           0x0000000000000000        0x0 AS1108.o
- .text.SPI_tradeByte
-                0x0000000000000000        0xa AS1108.o
- .text.DISPLAY_writeByte
-                0x0000000000000000       0x16 AS1108.o
  .text.DISPLAY_setupNormalOperation
                 0x0000000000000000        0x8 AS1108.o
  .text.DISPLAY_test
                 0x0000000000000000        0x8 AS1108.o
- .text.DISPLAY_setNoDecodeMode
-                0x0000000000000000        0x8 AS1108.o
  .text.DISPLAY_setDecodeAllMode
-                0x0000000000000000        0x8 AS1108.o
- .text.DISPLAY_setScanLimit
-                0x0000000000000000        0x8 AS1108.o
- .text.DISPLAY_setBrightness
                 0x0000000000000000        0x8 AS1108.o
  .text.DISPLAY_setCodeBMode
                 0x0000000000000000       0x10 AS1108.o
@@ -52,48 +59,22 @@ Discarded input sections
                 0x0000000000000000       0x10 AS1108.o
  .text.DISPLAY_reset
                 0x0000000000000000       0x10 AS1108.o
- .text.DISPLAY_defaultConfig
-                0x0000000000000000       0x14 AS1108.o
- .text.DISPLAY_defaultTest
-                0x0000000000000000       0x6a AS1108.o
- .text.DISPLAY_byteForChar
-                0x0000000000000000       0x16 AS1108.o
- .text.DISPLAY_writeChar
-                0x0000000000000000       0x14 AS1108.o
- .rodata.CSWTCH.37
-                0x0000000000000000       0x43 AS1108.o
+ .text.DISPLAY_setExternalClock
+                0x0000000000000000       0x10 AS1108.o
+ .text.DISPLAY_setInternalClock
+                0x0000000000000000       0x10 AS1108.o
  .bss.featureData
                 0x0000000000000000        0x1 AS1108.o
- .text          0x0000000000000000        0x0 MIDI.o
- .data          0x0000000000000000        0x0 MIDI.o
- .bss           0x0000000000000000        0x0 MIDI.o
- .text.MIDI_isNoteOn
-                0x0000000000000000       0x14 MIDI.o
- .text.MIDI_isNoteOff
-                0x0000000000000000       0x14 MIDI.o
- .text.MIDI_note
-                0x0000000000000000       0x4e MIDI.o
- .jumptables.gcc.MIDI_note
-                0x0000000000000000       0x16 MIDI.o
- .debug_info    0x0000000000000000      0x146 MIDI.o
- .debug_abbrev  0x0000000000000000       0xcf MIDI.o
- .debug_loc     0x0000000000000000      0x3a3 MIDI.o
- .debug_aranges
-                0x0000000000000000       0x30 MIDI.o
- .debug_ranges  0x0000000000000000       0x20 MIDI.o
- .debug_line    0x0000000000000000      0x28e MIDI.o
- .debug_str     0x0000000000000000      0x199 MIDI.o
- .comment       0x0000000000000000       0x12 MIDI.o
- .debug_frame   0x0000000000000000       0x44 MIDI.o
  .text          0x0000000000000000        0x0 midibox.o
  .data          0x0000000000000000        0x0 midibox.o
  .bss           0x0000000000000000        0x0 midibox.o
- .text          0x0000000000000000        0x0 organ.o
- .data          0x0000000000000000        0x0 organ.o
- .bss           0x0000000000000000        0x0 organ.o
  .text          0x0000000000000000        0x0 ../AVR-Programming-Library/USART.o
  .data          0x0000000000000000        0x0 ../AVR-Programming-Library/USART.o
  .bss           0x0000000000000000        0x0 ../AVR-Programming-Library/USART.o
+ .text.transmitByte
+                0x0000000000000000        0xe ../AVR-Programming-Library/USART.o
+ .text.printString
+                0x0000000000000000       0x26 ../AVR-Programming-Library/USART.o
  .text.readString
                 0x0000000000000000       0x58 ../AVR-Programming-Library/USART.o
  .text.printByte
@@ -108,120 +89,99 @@ Discarded input sections
                 0x0000000000000000       0x1e ../AVR-Programming-Library/USART.o
  .text.getNumber
                 0x0000000000000000       0x46 ../AVR-Programming-Library/USART.o
- .text          0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_udivmodqi4.o)
- .data          0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_udivmodqi4.o)
- .bss           0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_udivmodqi4.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodqi4.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodqi4.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodqi4.o)
  .text.libgcc.mul
-                0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_udivmodqi4.o)
- .text.libgcc.div
-                0x0000000000000000       0x18 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_udivmodqi4.o)
- .text.libgcc   0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_udivmodqi4.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodqi4.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodqi4.o)
  .text.libgcc.prologue
-                0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_udivmodqi4.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodqi4.o)
  .text.libgcc.builtins
-                0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_udivmodqi4.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodqi4.o)
  .text.libgcc.fmul
-                0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_udivmodqi4.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodqi4.o)
  .text.libgcc.fixed
-                0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_udivmodqi4.o)
- .debug_line    0x0000000000000000       0x9d /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_udivmodqi4.o)
- .debug_info    0x0000000000000000       0x26 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_udivmodqi4.o)
- .debug_abbrev  0x0000000000000000       0x14 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_udivmodqi4.o)
- .debug_aranges
-                0x0000000000000000       0x20 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_udivmodqi4.o)
- .debug_str     0x0000000000000000       0x81 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_udivmodqi4.o)
- .text          0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_udivmodhi4.o)
- .data          0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_udivmodhi4.o)
- .bss           0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_udivmodhi4.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodqi4.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
  .text.libgcc.mul
-                0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_udivmodhi4.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
  .text.libgcc.div
-                0x0000000000000000       0x28 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_udivmodhi4.o)
- .text.libgcc   0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_udivmodhi4.o)
+                0x0000000000000000       0x28 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
  .text.libgcc.prologue
-                0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_udivmodhi4.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
  .text.libgcc.builtins
-                0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_udivmodhi4.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
  .text.libgcc.fmul
-                0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_udivmodhi4.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
  .text.libgcc.fixed
-                0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_udivmodhi4.o)
- .debug_line    0x0000000000000000       0xcd /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_udivmodhi4.o)
- .debug_info    0x0000000000000000       0x26 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_udivmodhi4.o)
- .debug_abbrev  0x0000000000000000       0x14 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_udivmodhi4.o)
- .debug_aranges
-                0x0000000000000000       0x20 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_udivmodhi4.o)
- .debug_str     0x0000000000000000       0x81 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_udivmodhi4.o)
- .text          0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_exit.o)
- .data          0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_exit.o)
- .bss           0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_exit.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodhi4.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
  .text.libgcc.mul
-                0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_exit.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
  .text.libgcc.div
-                0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_exit.o)
- .text.libgcc   0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_exit.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
  .text.libgcc.prologue
-                0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_exit.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
  .text.libgcc.builtins
-                0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_exit.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
  .text.libgcc.fmul
-                0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_exit.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
  .text.libgcc.fixed
-                0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_exit.o)
- .text          0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_tablejump2.o)
- .data          0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_tablejump2.o)
- .bss           0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_tablejump2.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_tablejump2.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_tablejump2.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_tablejump2.o)
  .text.libgcc.mul
-                0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_tablejump2.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_tablejump2.o)
  .text.libgcc.div
-                0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_tablejump2.o)
- .text.libgcc   0x0000000000000000        0xc /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_tablejump2.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_tablejump2.o)
  .text.libgcc.prologue
-                0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_tablejump2.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_tablejump2.o)
  .text.libgcc.builtins
-                0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_tablejump2.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_tablejump2.o)
  .text.libgcc.fmul
-                0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_tablejump2.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_tablejump2.o)
  .text.libgcc.fixed
-                0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_tablejump2.o)
- .debug_line    0x0000000000000000       0x79 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_tablejump2.o)
- .debug_info    0x0000000000000000       0x26 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_tablejump2.o)
- .debug_abbrev  0x0000000000000000       0x14 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_tablejump2.o)
- .debug_aranges
-                0x0000000000000000       0x20 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_tablejump2.o)
- .debug_str     0x0000000000000000       0x81 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_tablejump2.o)
- .text          0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_copy_data.o)
- .data          0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_copy_data.o)
- .bss           0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_copy_data.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_tablejump2.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
  .text.libgcc.mul
-                0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_copy_data.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
  .text.libgcc.div
-                0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_copy_data.o)
- .text.libgcc   0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_copy_data.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
  .text.libgcc.prologue
-                0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_copy_data.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
  .text.libgcc.builtins
-                0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_copy_data.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
  .text.libgcc.fmul
-                0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_copy_data.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
  .text.libgcc.fixed
-                0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_copy_data.o)
- .text          0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_clear_bss.o)
- .data          0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_clear_bss.o)
- .bss           0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_clear_bss.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
  .text.libgcc.mul
-                0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_clear_bss.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
  .text.libgcc.div
-                0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_clear_bss.o)
- .text.libgcc   0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_clear_bss.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
  .text.libgcc.prologue
-                0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_clear_bss.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
  .text.libgcc.builtins
-                0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_clear_bss.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
  .text.libgcc.fmul
-                0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_clear_bss.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
  .text.libgcc.fixed
-                0x0000000000000000        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_clear_bss.o)
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
 
 Memory Configuration
 
@@ -229,7 +189,7 @@ Name             Origin             Length             Attributes
 text             0x0000000000000000 0x0000000000020000 xr
 data             0x0000000000800060 0x000000000000ffa0 rw !x
 eeprom           0x0000000000810000 0x0000000000010000 rw !x
-fuse             0x0000000000820000 0x0000000000000400 rw !x
+fuse             0x0000000000820000 0x0000000000000003 rw !x
 lock             0x0000000000830000 0x0000000000000400 rw !x
 signature        0x0000000000840000 0x0000000000000400 rw !x
 user_signatures  0x0000000000850000 0x0000000000000400 rw !x
@@ -238,22 +198,23 @@ user_signatures  0x0000000000850000 0x0000000000000400 rw !x
 Linker script and memory map
 
 Address of section .data set to 0x800100
-LOAD /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/../../../../../../avr/lib/avr5/crtatmega328p.o
-LOAD AS1108.o
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
 LOAD MIDI.o
-LOAD midibox.o
 LOAD organ.o
+LOAD MAX7219.o
+LOAD AS1108.o
+LOAD midibox.o
 LOAD ../AVR-Programming-Library/USART.o
 START GROUP
-LOAD /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a
-LOAD /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/../../../../../../avr/lib/avr5/libm.a
-LOAD /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/../../../../../../avr/lib/avr5/libc.a
-LOAD /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/../../../../../../avr/lib/avr5/libatmega328p.a
+LOAD /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libm.a
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libc.a
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/libatmega328p.a
 END GROUP
                 0x0000000000020000                __TEXT_REGION_LENGTH__ = DEFINED (__TEXT_REGION_LENGTH__)?__TEXT_REGION_LENGTH__:0x20000
                 0x000000000000ffa0                __DATA_REGION_LENGTH__ = DEFINED (__DATA_REGION_LENGTH__)?__DATA_REGION_LENGTH__:0xffa0
                 0x0000000000010000                __EEPROM_REGION_LENGTH__ = DEFINED (__EEPROM_REGION_LENGTH__)?__EEPROM_REGION_LENGTH__:0x10000
-                0x0000000000000400                __FUSE_REGION_LENGTH__ = DEFINED (__FUSE_REGION_LENGTH__)?__FUSE_REGION_LENGTH__:0x400
+                [0x0000000000000003]                __FUSE_REGION_LENGTH__ = DEFINED (__FUSE_REGION_LENGTH__)?__FUSE_REGION_LENGTH__:0x400
                 0x0000000000000400                __LOCK_REGION_LENGTH__ = DEFINED (__LOCK_REGION_LENGTH__)?__LOCK_REGION_LENGTH__:0x400
                 0x0000000000000400                __SIGNATURE_REGION_LENGTH__ = DEFINED (__SIGNATURE_REGION_LENGTH__)?__SIGNATURE_REGION_LENGTH__:0x400
                 0x0000000000000400                __USER_SIGNATURE_REGION_LENGTH__ = DEFINED (__USER_SIGNATURE_REGION_LENGTH__)?__USER_SIGNATURE_REGION_LENGTH__:0x400
@@ -348,9 +309,9 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x0000000000000000      0x22e
+.text           0x0000000000000000      0x390
  *(.vectors)
- .vectors       0x0000000000000000       0x68 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/../../../../../../avr/lib/avr5/crtatmega328p.o
+ .vectors       0x0000000000000000       0x68 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
                 0x0000000000000000                __vectors
                 0x0000000000000000                __vector_default
  *(.vectors)
@@ -363,162 +324,198 @@ END GROUP
                 0x0000000000000068                __trampolines_end = .
  *libprintf_flt.a:*(.progmem.data)
  *libc.a:*(.progmem.data)
- *(.progmem.*)
+ *(.progmem*)
                 0x0000000000000068                . = ALIGN (0x2)
- *(.lowtext)
- *(.lowtext*)
-                0x0000000000000068                __ctors_start = .
- *(.ctors)
-                0x0000000000000068                __ctors_end = .
-                0x0000000000000068                __dtors_start = .
- *(.dtors)
-                0x0000000000000068                __dtors_end = .
- SORT_BY_NAME(*)(.ctors)
- SORT_BY_NAME(*)(.dtors)
- *(.init0)
- .init0         0x0000000000000068        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/../../../../../../avr/lib/avr5/crtatmega328p.o
-                0x0000000000000068                __init
- *(.init0)
- *(.init1)
- *(.init1)
- *(.init2)
- .init2         0x0000000000000068        0xc /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/../../../../../../avr/lib/avr5/crtatmega328p.o
- *(.init2)
- *(.init3)
- *(.init3)
- *(.init4)
- .init4         0x0000000000000074       0x16 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_copy_data.o)
-                0x0000000000000074                __do_copy_data
- .init4         0x000000000000008a       0x10 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_clear_bss.o)
-                0x000000000000008a                __do_clear_bss
- *(.init4)
- *(.init5)
- *(.init5)
- *(.init6)
- *(.init6)
- *(.init7)
- *(.init7)
- *(.init8)
- *(.init8)
- *(.init9)
- .init9         0x000000000000009a        0x8 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/../../../../../../avr/lib/avr5/crtatmega328p.o
- *(.init9)
- *(.text)
- .text          0x00000000000000a2        0x4 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/../../../../../../avr/lib/avr5/crtatmega328p.o
-                0x00000000000000a2                __vector_20
-                0x00000000000000a2                __vector_1
-                0x00000000000000a2                __vector_24
-                0x00000000000000a2                __vector_12
-                0x00000000000000a2                __bad_interrupt
-                0x00000000000000a2                __vector_6
-                0x00000000000000a2                __vector_3
-                0x00000000000000a2                __vector_23
-                0x00000000000000a2                __vector_25
-                0x00000000000000a2                __vector_11
-                0x00000000000000a2                __vector_13
-                0x00000000000000a2                __vector_17
-                0x00000000000000a2                __vector_19
-                0x00000000000000a2                __vector_7
-                0x00000000000000a2                __vector_5
-                0x00000000000000a2                __vector_4
-                0x00000000000000a2                __vector_9
-                0x00000000000000a2                __vector_2
-                0x00000000000000a2                __vector_21
-                0x00000000000000a2                __vector_15
-                0x00000000000000a2                __vector_8
-                0x00000000000000a2                __vector_14
-                0x00000000000000a2                __vector_10
-                0x00000000000000a2                __vector_16
-                0x00000000000000a2                __vector_18
-                0x00000000000000a2                __vector_22
-                0x00000000000000a6                . = ALIGN (0x2)
- *(.text.*)
- .text.initSPI  0x00000000000000a6       0x1e AS1108.o
-                0x00000000000000a6                initSPI
- .text.startup.main
-                0x00000000000000c4       0xba midibox.o
-                0x00000000000000c4                main
- .text.playNote
-                0x000000000000017e       0x3a organ.o
-                0x000000000000017e                playNote
- .text.rest     0x00000000000001b8        0xe organ.o
-                0x00000000000001b8                rest
- .text.initUSART
-                0x00000000000001c6       0x22 ../AVR-Programming-Library/USART.o
-                0x00000000000001c6                initUSART
- .text.transmitByte
-                0x00000000000001e8        0xe ../AVR-Programming-Library/USART.o
-                0x00000000000001e8                transmitByte
- .text.receiveByte
-                0x00000000000001f6        0xe ../AVR-Programming-Library/USART.o
-                0x00000000000001f6                receiveByte
- .text.printString
-                0x0000000000000204       0x26 ../AVR-Programming-Library/USART.o
-                0x0000000000000204                printString
-                0x000000000000022a                . = ALIGN (0x2)
- *(.fini9)
- .fini9         0x000000000000022a        0x0 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_exit.o)
-                0x000000000000022a                exit
-                0x000000000000022a                _exit
- *(.fini9)
- *(.fini8)
- *(.fini8)
- *(.fini7)
- *(.fini7)
- *(.fini6)
- *(.fini6)
- *(.fini5)
- *(.fini5)
- *(.fini4)
- *(.fini4)
- *(.fini3)
- *(.fini3)
- *(.fini2)
- *(.fini2)
- *(.fini1)
- *(.fini1)
- *(.fini0)
- .fini0         0x000000000000022a        0x4 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_exit.o)
- *(.fini0)
- *(.hightext)
- *(.hightext*)
- *(.progmemx.*)
-                0x000000000000022e                . = ALIGN (0x2)
  *(.jumptables)
  *(.jumptables*)
-                0x000000000000022e                _etext = .
+ .jumptables.gcc.MIDI_note
+                0x0000000000000068       0x16 MIDI.o
+ *(.lowtext)
+ *(.lowtext*)
+                0x000000000000007e                __ctors_start = .
+ *(.ctors)
+                0x000000000000007e                __ctors_end = .
+                0x000000000000007e                __dtors_start = .
+ *(.dtors)
+                0x000000000000007e                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x000000000000007e        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+                0x000000000000007e                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x000000000000007e        0xc /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x000000000000008a       0x16 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_copy_data.o)
+                0x000000000000008a                __do_copy_data
+ .init4         0x00000000000000a0       0x10 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_clear_bss.o)
+                0x00000000000000a0                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x00000000000000b0        0x8 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+ *(.init9)
+ *(.text)
+ .text          0x00000000000000b8        0x4 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+                0x00000000000000b8                __vector_22
+                0x00000000000000b8                __vector_1
+                0x00000000000000b8                __vector_24
+                0x00000000000000b8                __vector_12
+                0x00000000000000b8                __bad_interrupt
+                0x00000000000000b8                __vector_6
+                0x00000000000000b8                __vector_3
+                0x00000000000000b8                __vector_23
+                0x00000000000000b8                __vector_25
+                0x00000000000000b8                __vector_11
+                0x00000000000000b8                __vector_13
+                0x00000000000000b8                __vector_17
+                0x00000000000000b8                __vector_19
+                0x00000000000000b8                __vector_7
+                0x00000000000000b8                __vector_5
+                0x00000000000000b8                __vector_4
+                0x00000000000000b8                __vector_9
+                0x00000000000000b8                __vector_2
+                0x00000000000000b8                __vector_21
+                0x00000000000000b8                __vector_15
+                0x00000000000000b8                __vector_8
+                0x00000000000000b8                __vector_14
+                0x00000000000000b8                __vector_10
+                0x00000000000000b8                __vector_16
+                0x00000000000000b8                __vector_18
+                0x00000000000000b8                __vector_20
+                0x00000000000000bc                . = ALIGN (0x2)
+ *(.text.*)
+ .text.MIDI_isNoteOn
+                0x00000000000000bc       0x14 MIDI.o
+                0x00000000000000bc                MIDI_isNoteOn
+ .text.MIDI_isNoteOff
+                0x00000000000000d0       0x14 MIDI.o
+                0x00000000000000d0                MIDI_isNoteOff
+ .text.MIDI_note
+                0x00000000000000e4       0x4e MIDI.o
+                0x00000000000000e4                MIDI_note
+ .text.initSPI  0x0000000000000132       0x1e AS1108.o
+                0x0000000000000132                initSPI
+ .text.SPI_tradeByte
+                0x0000000000000150        0xa AS1108.o
+                0x0000000000000150                SPI_tradeByte
+ .text.DISPLAY_writeByte
+                0x000000000000015a       0x16 AS1108.o
+                0x000000000000015a                DISPLAY_writeByte
+ .text.addressForDigit
+                0x0000000000000170       0x2a AS1108.o
+                0x0000000000000170                addressForDigit
+ .text.DISPLAY_setupNormalOperationResetFeature
+                0x000000000000019a        0x8 AS1108.o
+                0x000000000000019a                DISPLAY_setupNormalOperationResetFeature
+ .text.DISPLAY_setNoDecodeMode
+                0x00000000000001a2        0x8 AS1108.o
+                0x00000000000001a2                DISPLAY_setNoDecodeMode
+ .text.DISPLAY_setScanLimit
+                0x00000000000001aa        0x8 AS1108.o
+                0x00000000000001aa                DISPLAY_setScanLimit
+ .text.DISPLAY_setBrightness
+                0x00000000000001b2        0x8 AS1108.o
+                0x00000000000001b2                DISPLAY_setBrightness
+ .text.DISPLAY_defaultConfig
+                0x00000000000001ba       0x14 AS1108.o
+                0x00000000000001ba                DISPLAY_defaultConfig
+ .text.DISPLAY_defaultTest
+                0x00000000000001ce       0x6a AS1108.o
+                0x00000000000001ce                DISPLAY_defaultTest
+ .text.DISPLAY_byteForChar
+                0x0000000000000238       0x16 AS1108.o
+                0x0000000000000238                DISPLAY_byteForChar
+ .text.DISPLAY_writeChar
+                0x000000000000024e       0x14 AS1108.o
+                0x000000000000024e                DISPLAY_writeChar
+ .text.DISPLAY_writeChars
+                0x0000000000000262       0x3c AS1108.o
+                0x0000000000000262                DISPLAY_writeChars
+ .text.startup.main
+                0x000000000000029e       0x9a midibox.o
+                0x000000000000029e                main
+ .text.initUSART
+                0x0000000000000338       0x22 ../AVR-Programming-Library/USART.o
+                0x0000000000000338                initUSART
+ .text.receiveByte
+                0x000000000000035a        0xe ../AVR-Programming-Library/USART.o
+                0x000000000000035a                receiveByte
+ .text.libgcc.div
+                0x0000000000000368       0x18 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_udivmodqi4.o)
+                0x0000000000000368                __udivmodqi4
+ .text.libgcc   0x0000000000000380        0xc /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_tablejump2.o)
+                0x0000000000000380                __tablejump2__
+                0x000000000000038c                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x000000000000038c        0x0 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+                0x000000000000038c                exit
+                0x000000000000038c                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x000000000000038c        0x4 /usr/lib/gcc/avr/5.4.0/avr5/libgcc.a(_exit.o)
+ *(.fini0)
+                0x0000000000000390                _etext = .
 
-.data           0x0000000000800100       0x54 load address 0x000000000000022e
-                0x0000000000800100                PROVIDE (__data_start = .)
+.data           0x0000000000800100       0x48 load address 0x0000000000000390
+                0x0000000000800100                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
- *(.gnu.linkonce.d*)
  *(.rodata)
- .rodata        0x0000000000800100       0x24 midibox.o
  *(.rodata*)
- .rodata.main.str1.1
-                0x0000000000800124       0x2f midibox.o
- *(.gnu.linkonce.r*)
-                0x0000000000800154                . = ALIGN (0x2)
- *fill*         0x0000000000800153        0x1 
-                0x0000000000800154                _edata = .
-                0x0000000000800154                PROVIDE (__data_end = .)
+ .rodata.CSWTCH.46
+                0x0000000000800100       0x43 AS1108.o
+ .rodata.str1.1
+                0x0000000000800143        0x5 midibox.o
+ *(.gnu.linkonce.d*)
+                0x0000000000800148                . = ALIGN (0x2)
+                0x0000000000800148                _edata = .
+                0x0000000000800148                PROVIDE (__data_end, .)
 
-.bss            0x0000000000800154        0x0
-                0x0000000000800154                PROVIDE (__bss_start = .)
+.bss            0x0000000000800148        0x0
+                0x0000000000800148                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
  *(COMMON)
-                0x0000000000800154                PROVIDE (__bss_end = .)
-                0x000000000000022e                __data_load_start = LOADADDR (.data)
-                0x0000000000000282                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x0000000000800148                PROVIDE (__bss_end, .)
+                0x0000000000000390                __data_load_start = LOADADDR (.data)
+                0x00000000000003d8                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x0000000000800154        0x0
-                [!provide]                        PROVIDE (__noinit_start = .)
+.noinit         0x0000000000800148        0x0
+                [!provide]                        PROVIDE (__noinit_start, .)
  *(.noinit*)
-                [!provide]                        PROVIDE (__noinit_end = .)
-                0x0000000000800154                _end = .
-                [!provide]                        PROVIDE (__heap_start = .)
+                [!provide]                        PROVIDE (__noinit_end, .)
+                0x0000000000800148                _end = .
+                [!provide]                        PROVIDE (__heap_start, .)
 
 .eeprom         0x0000000000810000        0x0
  *(.eeprom*)
@@ -536,13 +533,19 @@ END GROUP
 .signature
  *(.signature*)
 
-.stab           0x0000000000000000      0x63c
- *(.stab)
- .stab          0x0000000000000000      0x63c organ.o
+.user_signatures
+ *(.user_signatures*)
 
-.stabstr        0x0000000000000000      0xd1f
+.stab           0x0000000000000000      0xf90
+ *(.stab)
+ .stab          0x0000000000000000      0xa14 AS1108.o
+                                        0xf60 (size before relaxing)
+ .stab          0x0000000000000a14      0x57c midibox.o
+                                        0x744 (size before relaxing)
+
+.stabstr        0x0000000000000000     0x13d6
  *(.stabstr)
- .stabstr       0x0000000000000000      0xd1f organ.o
+ .stabstr       0x0000000000000000     0x13d6 organ.o
 
 .stab.excl
  *(.stab.excl)
@@ -558,17 +561,17 @@ END GROUP
 
 .comment        0x0000000000000000       0x22
  *(.comment)
- .comment       0x0000000000000000       0x11 AS1108.o
+ .comment       0x0000000000000000       0x11 MIDI.o
                                          0x12 (size before relaxing)
- .comment       0x0000000000000011       0x12 midibox.o
- .comment       0x0000000000000011       0x11 organ.o
+ .comment       0x0000000000000011       0x11 AS1108.o
                                          0x12 (size before relaxing)
+ .comment       0x0000000000000022       0x12 midibox.o
  .comment       0x0000000000000022       0x12 ../AVR-Programming-Library/USART.o
 
 .note.gnu.avr.deviceinfo
                 0x0000000000000000       0x40
  .note.gnu.avr.deviceinfo
-                0x0000000000000000       0x40 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/../../../../../../avr/lib/avr5/crtatmega328p.o
+                0x0000000000000000       0x40 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
 
 .note.gnu.build-id
  *(.note.gnu.build-id)
@@ -585,78 +588,51 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x0000000000000000      0x1b0
+.debug_aranges  0x0000000000000000       0xa0
  *(.debug_aranges)
  .debug_aranges
-                0x0000000000000000       0xc0 AS1108.o
+                0x0000000000000000       0x30 MIDI.o
  .debug_aranges
-                0x00000000000000c0       0x20 midibox.o
- .debug_aranges
-                0x00000000000000e0       0x70 ../AVR-Programming-Library/USART.o
- .debug_aranges
-                0x0000000000000150       0x20 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_exit.o)
- .debug_aranges
-                0x0000000000000170       0x20 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_copy_data.o)
- .debug_aranges
-                0x0000000000000190       0x20 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_clear_bss.o)
+                0x0000000000000030       0x70 ../AVR-Programming-Library/USART.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0x12b8
+.debug_info     0x0000000000000000      0xb41
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x0000000000000000      0x5f4 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/../../../../../../avr/lib/avr5/crtatmega328p.o
- .debug_info    0x00000000000005f4      0x5a9 AS1108.o
- .debug_info    0x0000000000000b9d      0x2a2 midibox.o
- .debug_info    0x0000000000000e3f      0x407 ../AVR-Programming-Library/USART.o
- .debug_info    0x0000000000001246       0x26 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_exit.o)
- .debug_info    0x000000000000126c       0x26 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_copy_data.o)
- .debug_info    0x0000000000001292       0x26 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_clear_bss.o)
+ .debug_info    0x0000000000000000      0x5f4 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+ .debug_info    0x00000000000005f4      0x146 MIDI.o
+ .debug_info    0x000000000000073a      0x407 ../AVR-Programming-Library/USART.o
 
-.debug_abbrev   0x0000000000000000      0xa6e
+.debug_abbrev   0x0000000000000000      0x7b1
  *(.debug_abbrev)
- .debug_abbrev  0x0000000000000000      0x5a2 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/../../../../../../avr/lib/avr5/crtatmega328p.o
- .debug_abbrev  0x00000000000005a2      0x1ea AS1108.o
- .debug_abbrev  0x000000000000078c      0x166 midibox.o
- .debug_abbrev  0x00000000000008f2      0x140 ../AVR-Programming-Library/USART.o
- .debug_abbrev  0x0000000000000a32       0x14 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_exit.o)
- .debug_abbrev  0x0000000000000a46       0x14 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_copy_data.o)
- .debug_abbrev  0x0000000000000a5a       0x14 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_clear_bss.o)
+ .debug_abbrev  0x0000000000000000      0x5a2 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+ .debug_abbrev  0x00000000000005a2       0xcf MIDI.o
+ .debug_abbrev  0x0000000000000671      0x140 ../AVR-Programming-Library/USART.o
 
-.debug_line     0x0000000000000000      0xf8e
+.debug_line     0x0000000000000000      0x889
  *(.debug_line .debug_line.* .debug_line_end)
- .debug_line    0x0000000000000000       0x1d /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/../../../../../../avr/lib/avr5/crtatmega328p.o
- .debug_line    0x000000000000001d      0x5b5 AS1108.o
- .debug_line    0x00000000000005d2      0x25e midibox.o
- .debug_line    0x0000000000000830      0x5e1 ../AVR-Programming-Library/USART.o
- .debug_line    0x0000000000000e11       0x61 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_exit.o)
- .debug_line    0x0000000000000e72       0x97 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_copy_data.o)
- .debug_line    0x0000000000000f09       0x85 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_clear_bss.o)
+ .debug_line    0x0000000000000000       0x1a /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+ .debug_line    0x000000000000001a      0x28e MIDI.o
+ .debug_line    0x00000000000002a8      0x5e1 ../AVR-Programming-Library/USART.o
 
-.debug_frame    0x0000000000000000      0x310
+.debug_frame    0x0000000000000000      0x194
  *(.debug_frame)
- .debug_frame   0x0000000000000000      0x194 AS1108.o
- .debug_frame   0x0000000000000194       0x2c midibox.o
- .debug_frame   0x00000000000001c0      0x150 ../AVR-Programming-Library/USART.o
+ .debug_frame   0x0000000000000000       0x44 MIDI.o
+ .debug_frame   0x0000000000000044      0x150 ../AVR-Programming-Library/USART.o
 
-.debug_str      0x0000000000000000      0x711
+.debug_str      0x0000000000000000      0x467
  *(.debug_str)
- .debug_str     0x0000000000000000      0x208 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/../../../../../../avr/lib/avr5/crtatmega328p.o
- .debug_str     0x0000000000000208      0x347 AS1108.o
-                                        0x380 (size before relaxing)
- .debug_str     0x000000000000054f       0x7a midibox.o
-                                        0x21f (size before relaxing)
- .debug_str     0x00000000000005c9       0xc7 ../AVR-Programming-Library/USART.o
+ .debug_str     0x0000000000000000      0x208 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr5/crtatmega328p.o
+ .debug_str     0x0000000000000208      0x15b MIDI.o
+                                        0x199 (size before relaxing)
+ .debug_str     0x0000000000000363      0x104 ../AVR-Programming-Library/USART.o
                                         0x24d (size before relaxing)
- .debug_str     0x0000000000000690       0x81 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_exit.o)
- .debug_str     0x0000000000000711       0x81 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_copy_data.o)
- .debug_str     0x0000000000000711       0x81 /usr/local/Cellar/avr-gcc/9.1.0/lib/avr-gcc/9/gcc/avr/9.1.0/avr5/libgcc.a(_clear_bss.o)
 
-.debug_loc      0x0000000000000000      0x71d
+.debug_loc      0x0000000000000000      0x7d2
  *(.debug_loc)
- .debug_loc     0x0000000000000000      0x1de AS1108.o
- .debug_loc     0x00000000000001de      0x110 midibox.o
- .debug_loc     0x00000000000002ee      0x42f ../AVR-Programming-Library/USART.o
+ .debug_loc     0x0000000000000000      0x3a3 MIDI.o
+ .debug_loc     0x00000000000003a3      0x42f ../AVR-Programming-Library/USART.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -676,16 +652,12 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x0000000000000000      0x120
+.debug_ranges   0x0000000000000000       0x80
  *(.debug_ranges)
- .debug_ranges  0x0000000000000000       0xb0 AS1108.o
- .debug_ranges  0x00000000000000b0       0x10 midibox.o
- .debug_ranges  0x00000000000000c0       0x60 ../AVR-Programming-Library/USART.o
+ .debug_ranges  0x0000000000000000       0x20 MIDI.o
+ .debug_ranges  0x0000000000000020       0x60 ../AVR-Programming-Library/USART.o
 
 .debug_macro
  *(.debug_macro)
-
-.debug_addr
- *(.debug_addr)
 OUTPUT(MidiBox.elf elf32-avr)
 LOAD linker stubs
